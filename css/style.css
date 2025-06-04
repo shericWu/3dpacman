@@ -2,7 +2,7 @@
 
 body {
     background-image:
-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/welcome_background.jpg);
+linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/welcome_background.jpg);
     text-align: center;
       background-repeat: no-repeat;
   background-position: center;
@@ -14,7 +14,7 @@ linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/welcome_ba
 
 #container {
     background-image:
-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/welcome_background.jpg);
+linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/welcome_background.jpg);
     text-align: center;
       background-repeat: no-repeat;
   background-position: center;
