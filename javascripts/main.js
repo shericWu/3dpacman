@@ -210,7 +210,7 @@ document.addEventListener('keydown', (event) => {
     }
     if(event.key.toLowerCase() == 'escape' && !gaming){
         event.preventDefault();
-        window.location.replace("/");
+        window.location.replace("/3dpacman/");
     }
 });
 
