@@ -166,7 +166,7 @@ async function init() {
     document.getElementById('energyText').style.display = '';
     init_energy_bar();
 
-    heartbeat = new Audio('/sounds/heartbeat.mp3');
+    heartbeat = new Audio('/3dpacman/sounds/heartbeat.mp3');
     heartbeat.volume = (MODE_SOUND)? 0.05 : 0;
     heartbeat.loop = true;
     sound_playing = false;
@@ -337,7 +337,7 @@ function player_collide(step_dir, check) {
         let black_hole = maze.black_hole_group.children[i]
         if (player_box_x.intersectsBox(black_hole.geometry.boundingBox)) {
             if(MODE_SOUND){
-                let sound = new Audio('/sounds/black_hole.mp3');
+                let sound = new Audio('/3dpacman/sounds/black_hole.mp3');
                 sound.currentTime = 0.1;
                 sound.play();
             }
@@ -414,7 +414,7 @@ function movePlayer(collision, camera_dir, step_dir) {
 function play_coin_sound(){
     if (!MODE_SOUND)
         return
-    const sound = new Audio('/sounds/coin.mp3');
+    const sound = new Audio('/3dpacman/sounds/coin.mp3');
     sound.volume = 0.05;
     sound.play();
 }
@@ -598,7 +598,7 @@ function game_end(success){
 
     if(success){
         if (MODE_SOUND) {
-            const sound = new Audio('/sounds/pac_man_victory.mp3');
+            const sound = new Audio('/3dpacman/sounds/pac_man_victory.mp3');
             sound.volume = 0.05;
             sound.play();
         }
@@ -606,7 +606,7 @@ function game_end(success){
     }
     else{
         if (MODE_SOUND) {
-            const sound = new Audio('/sounds/pac_man_death.mp3');
+            const sound = new Audio('/3dpacman/sounds/pac_man_death.mp3');
             sound.volume = 0.05;
             sound.play();
         }

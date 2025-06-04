@@ -257,14 +257,14 @@ function gen_single_enemy(i) {
         const manager = new THREE.LoadingManager();
         const mtlLoader = new MTLLoader(manager);
         let prev_value = 0;
-        mtlLoader.setPath('/models/');
+        mtlLoader.setPath('/3dpacman/models/');
         mtlLoader.load(
             `${filename[i]}.mtl`,
             /* Called when finished */
             function (material) {
                 material.preload();
                 const loader = new OBJLoader(manager);
-                loader.setPath('/models/');
+                loader.setPath('/3dpacman/models/');
                 loader.setMaterials(material);
                 loader.load(
                     `${filename[i]}.obj`,
