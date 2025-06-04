@@ -212,7 +212,7 @@ export function gen_black_holes(maze, n_black_hole) {
 
 function gen_portals(maze){
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load('/images/MCportal.jpg');
+    const texture = textureLoader.load('/3dpacman/images/MCportal.jpg');
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
     texture.repeat.set(3, 4);
