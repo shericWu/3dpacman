@@ -6,7 +6,7 @@ import { init_small_map,  updateSmallMap, remove_bean, gen_big_beans_on_map } fr
 import { init_energy_bar, updateEnergyBar } from './energy_bar.js';
 
 import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
-export const DEBUG = false;;
+export const DEBUG = (sessionStorage.getItem("MODE_DEBUG") === "true")? true : false;
 const LIGHTOUT = (sessionStorage.getItem("MODE_LIGHTOUT") === "true")? true : false;
 const ENEMY_ACCELERATION = (sessionStorage.getItem("MODE_ACCELERATE") === "true")? true : false;
 const RED_LIGHT_GREEN_LIGHT = (sessionStorage.getItem("MODE_REDGREEN") === "true")? true : false;

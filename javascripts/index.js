@@ -4,7 +4,8 @@ const CHECKBOX = [
     "checkbox-lightout",
     "checkbox-torment",
     "checkbox-redgreen",
-    "checkbox-model"
+    "checkbox-model",
+    "checkbox-debug"
 ]
 
 const LIVES_NUM = "lives_num";
@@ -15,7 +16,8 @@ const STORAGE_MODE = [
     "MODE_LIGHTOUT",
     "MODE_HARD",
     "MODE_REDGREEN",
-    "MODE_MODEL"
+    "MODE_MODEL",
+    "MODE_DEBUG"
 ]
 
 const STORAGE_NUM = "LIFE";
@@ -27,6 +29,7 @@ const DEFAULT_ON = [
     "false",
     "false",
     "true",
+    "false"
 ]
 
 const DEFAULT_NUM = "1";
