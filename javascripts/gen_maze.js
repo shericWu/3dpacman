@@ -212,7 +212,7 @@ export function gen_black_holes(maze, n_black_hole) {
 
 function gen_portals(maze){
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load('/static/images/MCportal.jpg');
+    const texture = textureLoader.load('/images/MCportal.jpg');
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
     texture.repeat.set(3, 4);
@@ -257,14 +257,14 @@ function gen_single_enemy(i) {
         const manager = new THREE.LoadingManager();
         const mtlLoader = new MTLLoader(manager);
         let prev_value = 0;
-        mtlLoader.setPath('/static/models/');
+        mtlLoader.setPath('/models/');
         mtlLoader.load(
             `${filename[i]}.mtl`,
             /* Called when finished */
             function (material) {
                 material.preload();
                 const loader = new OBJLoader(manager);
-                loader.setPath('/static/models/');
+                loader.setPath('/models/');
                 loader.setMaterials(material);
                 loader.load(
                     `${filename[i]}.obj`,
