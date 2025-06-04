@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
     <head>
         <meta charset="utf-8">
         <title>3D Pacman</title>
-        <link rel="icon" type="image/x-icon" href="{% static "images/favicon.ico" %}">
-        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="css/style.css">
         <script type="importmap">
         {
             "imports": {
@@ -49,11 +48,11 @@
                 </div>
             </div>
         </div>
-        <script type="module" src="{% static "javascripts/main.js" %}"></script>
-        <script type="module" src="{% static "javascripts/maze.js" %}"></script>
-        <script type="module" src="{% static "javascripts/small_map.js" %}"></script>
-        <script type="module" src="{% static "javascripts/gen_maze.js" %}"></script>
-        <script type="module" src="{% static "javascripts/enemy.js" %}"></script>
+        <script type="module" src="javascripts/main.js"></script>
+        <script type="module" src="javascripts/maze.js"></script>
+        <script type="module" src="javascripts/small_map.js"></script>
+        <script type="module" src="javascripts/gen_maze.js"></script>
+        <script type="module" src="javascripts/enemy.js"></script>
         <script>
             const progress = document.getElementById('loading-progress');
             const percent = document.getElementById('loading-percent');
