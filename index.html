@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>3D Pacman</title>
+        <link rel="icon" type="image/x-icon" href="{% static "images/favicon.ico" %}">
+        <link rel="stylesheet" href="{% static "css/welcome.css" %}">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <!-- <div class="player_login">
+            <button class="butt" id="login">login</button>
+        </div> -->
+        <!-- <div class="player_login">
+            <button class="butt" id="Login">Login</button>
+            <button class="butt" id="Register">Register</button>
+        </div> -->
+
+        <div class="container">
+            <h1 class = "banner" id="pixel1"> Team 4's final project </h1>
+            <div class = "banner" id="pixel2">  3D Pacman </div>
+        </div>
+        <div class="set_mode">
+            <div>
+                <!-- <button type="button" class="btn btn-light">Game Start</button> -->
+                <button class = "butt" id="mode" > Mode </button>
+
+            </div>
+        </div>
+        <div class="start_game">
+            <div>
+                <!-- <button type="button" class="btn btn-light">Game Start</button> -->
+                <button class = "butt" id="start" onclick="location.href = '{% url 'game' %}'" > Start </button>
+            </div>
+        </div>
+        </body>
+        <div class="team_members">
+            <div>
+                <!-- <button type="button" class="btn btn-light">Game Start</button> -->
+                <button class = "butt" id="credit"> Credit </button>
+
+            </div>
+        </div>
+
+        <div class="modal-bg" id="mode_choose">
+            <div class="popup-box" onclick="event.stopPropagation()">
+                <h2 class="popup-title">Game Mode</h2>
+                <div class="mode_choose">
+                    <label><input type="checkbox" id="checkbox-sound" name="name" value="mode1" checked> Enable sound </label>
+                    <label><input type="checkbox" id="checkbox-accel" name="name" value="mode2" checked> Enemy acceleration </label>
+                    <label><input type="checkbox" id="checkbox-lightout" name="name" value="mode3" checked> Lights out </label>
+                    <label><input type="checkbox" id="checkbox-torment" name="name" value="mode4"> Torment </label>
+                    <label><input type="checkbox" id="checkbox-redgreen" name="name" value="mode5"> Red light, green light </label>
+                    <label><input type="checkbox" id="checkbox-model" name="name" value="mode6" checked> Load enemy models </label>
+                    <span> Lives: </span><button id="minus" class="num_button">-</button><span id="lives_num">1</span><button id="plus" class="num_button">+</button>
+                </div>
+                <button id="ok">OK</button>
+            </div>
+        </div>
+
+        <div class="modal-bg" id="person">
+            <div class="popup-box" style="text-align: center" onclick="event.stopPropagation()">
+                <h2 class="popup-title">Credit</h2>
+                <div class="st">B12902062</div>
+                <div class="st">B12902112</div>
+                <div class="st">B12902120</div>
+                <div class="st">B12902130</div>
+                <button id="close">close</button>
+            </div>
+        </div>
+        <script type="module" src="{% static "javascripts/index.js" %}"></script>
+    </body>
+</html>

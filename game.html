@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <title>3D Pacman</title>
+        <link rel="icon" type="image/x-icon" href="{% static "images/favicon.ico" %}">
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+                <div id="game_over">
+                    <span class="gg">Game Over</span>
+                    <button class="butt" id="butt1" onclick="location.href = '{% url 'homepage' %}'">Try Again!</button>
+                    <button class="butt" id="butt2">Revive</button>
+                    <span class="remain">You have <span id="remain">1</span> life left.</span>
+                </div>
+
+                <div id="game_complete">
+                    <span class="gg">Congraduations!</span>
+                    <button class="butt" id="butt3" onclick="location.href = '{% url 'homepage' %}'">Try Again!</button>
+                </div>
+                <div id="instructions">
+                    <span id="game_status">Click to start.</span><br>
+                    <span>Use mouse to look, WASD to move.</span><br>
+                <span>Shift to consume energy.</span><br><span>CapsLock to restore energy.</span><br>
+                    <span>Esc to exit.</span>
+                </div>
+                <div id="crosshair">+</div>
+                <span id="Score"></span>
+                <div id="energy"><div id="energyText">Energy Bar</div></div>
+                <div id="inGameMessage" class="fade-delay"></div>
+            <div id="loadingBar">
+                <div class="test">
+                    <div class="test2" style="display:flex;">
+                        <span id="loading">Loading...</span>
+                        <span id="loading-percent">0%</span>
+                    </div>
+
+                    <progress id="loading-progress" value="0" max="400"></progress>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="{% static "javascripts/main.js" %}"></script>
+        <script type="module" src="{% static "javascripts/maze.js" %}"></script>
+        <script type="module" src="{% static "javascripts/small_map.js" %}"></script>
+        <script type="module" src="{% static "javascripts/gen_maze.js" %}"></script>
+        <script type="module" src="{% static "javascripts/enemy.js" %}"></script>
+        <script>
+            const progress = document.getElementById('loading-progress');
+            const percent = document.getElementById('loading-percent');
+            let current = 0;
+            const interval = setInterval(() => {
+                current += 30;
+                if (current > 300) {
+                    clearInterval(interval);
+                } else {
+                    progress.value = current;
+                    percent.textContent = current / 3 + '%';
+                }
+            }, 5);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    background-image:
+linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/welcome_background.jpg);
+    text-align: center;
+      background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+    position: absolute;
+    width: max-content;
+
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Press Start 2P';
+    font-size: 30px;
+    color: white;
+    z-index: 10;
+    gap: 50px;
+}
+
+#pixel1 {
+    color:white;
+    margin-bottom: 50px;
+}
+
+#pixel2 {
+    font-size: 50px;
+}
+
+.set_mode{
+    position:absolute;
+    transform: translateX(-50%);
+    left:50%;
+    top:50%;
+    height:10px;
+    color: white;
+}
+
+.start_game{
+    position:absolute;
+    transform: translateX(-50%);
+    left:50%;
+    top:65%;
+    color: white;
+}
+
+.team_members{
+    position:absolute;
+    transform: translateX(-50%);
+    left:50%;
+    top:80%;
+    color: white;
+}
+
+.butt {
+  font-family: 'Press Start 2P';
+  font-size: 20px;
+  background-color: #ccc;
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+  height: 70px;
+  display: inline-block;
+  box-shadow: 2px 2px 0 #444; /* dark shadow for 3D effect */
+  text-shadow: 1px 1px 0 #444; /* make the font 3D */
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.butt:hover {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 #2d2d2d;
+  background-color: #6e6e6e;
+}
+
+
+
+body {
+  background-color: black;
+  font-family: 'Press Start 2P';
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ok {
+  font-family: 'Press Start 2P';
+
+  margin-left: auto;
+  width: 75px;
+  padding: 12px 24px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1500ff;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+}
+
+#ok:hover {
+  transform: translateY(2px);
+  background-color: #2b745e;
+}
+
+.modal-bg {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-box {
+    /* position: relative; */
+    display:flex;
+    flex-direction: column;
+    background: #111;
+    border: 4px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+    padding: 15px;
+    width: 800px;
+    text-align: center;
+    animation: popup 0.3s ease;
+}
+
+.popup-box h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.popup-box label {
+  display: block;
+  margin: 10px 0;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.popup-box input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#night{
+  margin-bottom: 0;
+}
+
+.st{
+  position: relative;
+  left: 50%;
+  font-size: 30px;
+  transform: translateX(-50%);
+  margin-top:15px;
+  margin-bottom: 0;
+}
+
+#close {
+  font-family: 'Press Start 2P';
+
+  margin-left: auto;
+  width: 75px;
+  padding: 12px 24px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1500ff;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  padding-left: 10px;
+}
+
+#close:hover {
+  transform: translateY(2px);
+  background-color: #2b745e;
+}
+
+.mode_choose{
+  text-align:left;;
+  position:relative;
+  left:20%;
+}
+
+#mode{
+  margin-bottom: 30px;
+}
+
+.player_login{
+  position: absolute;
+  top:0;
+  left:0;
+  display:flex;
+  align-items: center;
+}
+
+.player_login button{
+  margin-right:50px;
+}
+
+.num_button {
+  background-color: #111;
+  color: white;
+  border: 2px solid white;
+  border-radius: 0;
+  padding: 5px 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.num_button:hover{
+    background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+#checkbox-model{
+  margin-bottom: 20px;
+}
+
+#lives_num{
+  margin:20px;
+}

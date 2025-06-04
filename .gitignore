@@ -1,0 +1,12 @@
+node_modules/
+package-lock.json
+package.json
+jsconfig.json
+bin/
+include/
+lib/
+lib64
+pyvenv.cfg
+pacman/pacman/__pycache__/
+pacman/mainsite/__pycache__/
+pacman/mainsite/migrations/__pycache__/
