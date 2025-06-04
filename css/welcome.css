@@ -245,6 +245,10 @@ body {
 }
 
 #checkbox-model{
+  margin-bottom: 0px;
+}
+
+#checkbox-debug{
   margin-bottom: 20px;
 }
 
